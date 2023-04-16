@@ -3,58 +3,70 @@ let cpuInput;
 let numGen;
 let playerScore = 0;
 let computerScore = 0;
-let min = 1;
-let max = 3;
 
-console.log("PLayer points " + playerScore + " CPU Points " + computerScore);
 
-function RPS () {
-    while ((playerScore !== 3) || (computerScore !== 3))  {
-        numGen = Math.floor(Math.random() * (max - min + 1) + min);
-        cpuInput = numGen; /* 1 = rock | 2 = paper | 3 = scissors */
+function RPS() 
+{
+        numGen = Math.floor(Math.random() * 2);
+        cpuInput = numGen; /* 0 = rock | 1 = paper | 2 = scissors */
+        playerInput = prompt("Please enter rock, paper, or scissors.").toUpperCase();
+        console.log(cpuInput);
+        console.log(playerInput);
 
-        switch (playerInput) { 
+        switch (playerInput) 
+        {
 
-                case 0:
-                    playerInput = "ROCK";
-                        if (cpuInput = 3) {
-                        return "player wins!"
-                        playerScore++;
-                        } else if (cpuInput = 2) {
-                            return "Computer Wins!"
-                            computerScore++
-                        } else {
-                            return "Tie! No points added";
-                        }
-                break;
-                
-                case 1:
-                    playerInput = "PAPER";
-                    if (cpuInput = 1) {
-                        return "player wins!"
-                        playerScore++;
-                        } else if (cpuInput = 3) {
-                            return "Computer Wins!"
-                            computerScore++
-                        } else {
-                            return "Tie! No points added";
-                        }
-                break;
-
-                case 2:
-                    playerInput = "SCISSORS";
-                    if (cpuInput = 2) {
-                        return "player wins!"
-                        playerScore++;
-                        } else if (cpuInput = 1) {
-                            return "Computer Wins!"
-                            computerScore++
-                        } else {
-                            return "Tie! No points added";
-                        }
-                break;
+        case "ROCK":
+            playerInput = "ROCK";
+            if (cpuInput === 2) {
+            playerScore++;
+            return "player wins!";
+            } else if (cpuInput === 1) {
+            computerScore++
+            return "Computer wins!";
+            } else {
+            return "Tie! No points added";
             }
-        }
-    }
+            break;
 
-RPS();
+        case "PAPER":
+            playerInput = "PAPER";
+            if (cpuInput === 0) {
+            playerScore++;
+            return "player wins!";
+            } else if (cpuInput === 2) {
+            computerScore++
+            return "Computer wins!";
+            } else {
+            return "Tie! No points added";
+            }
+            break;
+
+        case "SCISSORS":
+            playerInput = "SCISSORS";
+            if (cpuInput === 1) {
+            playerScore++;
+            return "player wins!";
+            } else if (cpuInput === 0) {
+            computerScore++
+            return "Computer wins!";
+            } else {
+            return "Tie! No points added";
+            
+            }
+            break;
+            
+            default:
+                return "I am very tired";
+            break;
+            
+        }
+}
+
+while (playerScore < 3) {
+    RPS();
+    console.log("Player points " + playerScore + " CPU Points " + computerScore);
+    if (computerScore === 3) {
+        break;
+    }
+}
