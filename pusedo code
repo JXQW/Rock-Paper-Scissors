@@ -1,0 +1,39 @@
+rock paper scissor header
+
+Ask player rock, paper, or scissor?
+	If player enters incorrect choices ask again.
+	force all inputs to uppercase
+
+CPU picks first (player cant see)
+	random number generator
+	asign number to string
+	force all inputs to uppercase
+
+use outcome varible with strings
+	Switch Statement (ask gbt)
+	player: rock cpu: paper return computerWin
+	player: rock cpu: scissor return playerWin
+	player: paper cpu: rock return playerWin
+	player: paper cpu: scissor return computerWin
+	player: scissors cpu: paper return playerWin
+	player: scissors cpu: rock return computerWin
+	/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+	if both cpu and player have the same input return tie!
+	
+
+If you win message saying you win appears output player and cpu score
+	player score goes up if you win the round
+	viceversa for CPU
+	tie nobody gets points
+
+Game ends at best of three
+	if player or CPU score reaches 3 end
+	
+list of vars
+playerInput
+cpuInput
+numGen
+playerScore
+computerScore
+
+
