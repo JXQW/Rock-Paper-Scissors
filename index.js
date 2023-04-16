@@ -7,3 +7,5 @@ let min = 1;
 let max = 3;
 
 
+numGen = Math.floor(Math.random() * (max - min + 1) + min);
+cpuInput = numGen;
