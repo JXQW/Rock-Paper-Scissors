@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    background-color: purple; 
+    flex-direction: column;
+}
+
+h2 {
+    display: flex;
+    color: blueviolet;
+    justify-content: center;
+    align-items: end;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.container2 {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+button {
+    display: flex;
+    background-color: blueviolet;
+    color: blue;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    display: flex ;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+p {
+    display: flex;
+    color: blueviolet;
+    justify-content: center;
+    align-items: center;
+}
